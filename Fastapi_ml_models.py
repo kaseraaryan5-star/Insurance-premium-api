@@ -6,8 +6,10 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import classification_report, accuracy_score
+from pathlib import Path
 
-df = pd.read_csv('insurance.csv')
+
+df = pd.read_csv(Path(__file__).parent / 'insurance.csv')
 print(df.sample(5))
 
 print(df['occupation'].unique())
