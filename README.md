@@ -65,19 +65,17 @@ curl -X POST http://127.0.0.1:8000/predict \
 
 Response:
 
-```json
 {
   "response": {
     "predicted_category": "Low",
-    "confidence": 0.75,
+    "confidence": 0.78,
     "class_probabilities": {
-      "High": 0.0,
-      "Low": 0.75,
-      "Medium": 0.25
+      "High": 0,
+      "Low": 0.78,
+      "Medium": 0.22
     }
   }
 }
-```
 
 ## Model performance
 
