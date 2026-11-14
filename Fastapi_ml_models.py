@@ -7,7 +7,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.metrics import classification_report, accuracy_score
 
-df = pd.read_csv('/Users/aryankasera/Desktop/learning-fastapi/insurance.csv')
+df = pd.read_csv('insurance.csv')
 print(df.sample(5))
 
 print(df['occupation'].unique())
