@@ -42,7 +42,7 @@ def lifestyle_risk(row):
 
 df_feat['lifestyle_risk'] = df_feat.apply(lifestyle_risk, axis=1)
 
-tier_1_cities = ['Mumbai','Delhi','Banglore','Chennai','Kolkata','Hyderabad','Pune']
+tier_1_cities = ['Mumbai','Delhi','Bangalore','Chennai','Kolkata','Hyderabad','Pune']
 tier_2_cities = [
     'Jaipur','Chandigarh','Indore','Lucknow','Ranchi','Patna','Vishakhapatnam','Coimbatore',
     'Bhopal','Nagpur','Vadodara','Surat','Rajkot','Jodhpur','Raipur','Amritsar','Varanasi',
