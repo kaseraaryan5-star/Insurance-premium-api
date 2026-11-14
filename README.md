@@ -79,6 +79,14 @@ Response:
 }
 ```
 
+## Model performance
+
+Random Forest classifier trained on a small dataset (100 rows) and evaluated on a held-out test split (`random_state=42`).
+
+Accuracy: [X]
+
+Note: with only about 20 test samples, one or two predictions change the score by 5-10 points, so treat this as a rough indicator.
+
 ## Next steps
 
 - [ ] Dockerize the app
