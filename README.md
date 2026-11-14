@@ -81,14 +81,14 @@ Response:
 
 ## Model performance
 
-Random Forest classifier trained on a small dataset (100 rows) and evaluated on a held-out test split (`random_state=42`).
+Random Forest classifier trained on a small dataset (100 rows).
 
-Accuracy: [X]
+- 5-fold cross-validation accuracy: 0.72 (+/- 0.12)
+- Single train/test split (`random_state=42`, 20 test rows): 0.55
 
-Note: with only about 20 test samples, one or two predictions change the score by 5-10 points, so treat this as a rough indicator.
+Note: with only 100 rows, scores vary a lot between splits, so treat these numbers as a rough indicator. More data is needed for a reliable estimate.
 
 ## Next steps
 
 - [ ] Dockerize the app
 - [ ] Add PyTest tests for the API
-- [ ] Add model evaluation metrics to this README
