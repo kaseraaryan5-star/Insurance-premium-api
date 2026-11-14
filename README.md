@@ -27,15 +27,15 @@ Python, FastAPI, Pydantic, scikit-learn, pandas, Streamlit
 |---|---|
 | `App.py` | FastAPI app, input validation, feature engineering, `/predict` endpoint |
 | `Frontend.py` | Streamlit UI |
-| `Fastapi_ml_models.py` | Model experiments |
+| `Fastapi_ml_models.py` | Feature engineering and model training (generates model.pkl) |
 | `model.pkl` | Trained model |
 | `insurance.csv` | Training data |
 
 ## Run locally
 
 ```bash
-git clone https://github.com/kaseraaryan5-star/learning-fastapi.git
-cd learning-fastapi
+git clone https://github.com/kaseraaryan5-star/Insurance-premium-api.git
+cd Insurance-premium-api
 pip install -r requirements.txt
 
 # Terminal 1: backend
