@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
@@ -97,6 +97,8 @@ pipeline.fit(X_train, y_train)
 # Predict and evaluate
 y_pred = pipeline.predict(X_test)
 print(accuracy_score(y_test, y_pred))
+scores = cross_val_score(pipeline, X, y, cv=5)
+print("CV accuracy:", scores.mean().round(2), "+/-", scores.std().round(2))
 
 print(X_test.sample(5))
 
