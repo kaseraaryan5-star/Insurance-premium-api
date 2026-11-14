@@ -4,11 +4,11 @@ from pydantic import BaseModel , Field ,computed_field
 from typing import Literal , Annotated 
 import pickle
 import pandas as pd
+from pathlib import Path
 
 # Import the ml model
-with open('model.pkl','rb') as f:
+with open(Path(__file__).parent / 'model.pkl', 'rb') as f:
     model = pickle.load(f)
-
 app = FastAPI()
 
 
@@ -28,7 +28,7 @@ class UserInput(BaseModel):
     age: Annotated[int, Field(..., gt=0,lt=120,description='Age of the user')]
     weight: Annotated[float, Field(..., gt=0,description='Weight of the user')]
     height: Annotated[float, Field(..., gt=0,lt=2.5,description='Height of the user')]
-    income_lpa: Annotated[float, Field(..., gt=0,lt=120,description='Annual salary of the userin lpa')]
+    income_lpa: Annotated[float, Field(..., gt=0,lt=120,description='Annual salary of the user in LPA')]
     smoker: Annotated[bool, Field(..., description='Is user a smoker')]
     city: Annotated[str, Field(..., description='The city that the user belongs to')]
     occupation: Annotated[Literal['retired', 'freelancer', 'student', 'government_job',
